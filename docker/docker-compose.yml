@@ -1,0 +1,22 @@
+version: "4.19"
+services:
+  mysql:
+    image: mysql:8.0.33
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 7ahyeon
+      MYSQL_DATABASE: mlog
+      MYSQL_USER: mlogmanager
+      MYSQL_PASSWORD: 7ahyeon
+      TZ: Asia/Seoul
+    # 컨테이너 계층(Container Layer) : 컨테이너 종료시 함께 삭제
+    # 도커 볼륨 : 도커가 제공하는 볼륨 관리 기능을 통해 볼륨 생성 및 삭제, 관리 가능
+    volumes:
+      # data : mysql data가 생성되는 디렉토리 링크
+      - ./db/mysql/data:/var/lib/mysql
+      # config : mysql configuration 정보
+      - ./db/mysql/config:/etc/mysql/conf.d
+      # init : sql 파일을 넣고 initial data를 생성할 때 사용함(container 생성시 알파벳 순서대로 실행)
+      - ./db/mysql/init:/docker-entrypoint-initdb.d
