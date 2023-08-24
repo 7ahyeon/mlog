@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MLOG</title>
+    <%@include file="common/header.jspf"%>
 </head>
 <body>
     <p>
