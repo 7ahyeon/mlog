@@ -11,5 +11,5 @@
 - API 내 통신 기능이 포함될 시 json
 
 # DB 설계
-- ERD : https://www.erdcloud.com/d/fHNaESEC5Zpd2Pvy5
+- ERD : [https://www.erdcloud.com/d/fHNaESEC5Zpd2Pvy5](https://www.erdcloud.com/d/fHNaESEC5Zpd2Pvy5)
 - 테이블 정의서 : https://docs.google.com/spreadsheets/d/1E1Kz6-mXtiniZ3b2X67-Hb2VVOYirDGZpIzcG6rYAwI/edit?usp=sharing
